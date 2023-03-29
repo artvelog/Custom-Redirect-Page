@@ -11,7 +11,7 @@ I developed this plugin because I wanted to create a "redirect page" between a l
 
 I am not responsible for any problems that may arise from using the plugin! You can use and edit it as you wish.
 
-[My Website](https://emreertan.com) ~ [Artvelog Creative - WordPress support services](https://creative.artvelog.com) - [Patreon - Make Happy :)](https://patreon.com/artvelog)
+[My Website](https://emreertan.com) ~ [Artvelog Creative - WordPress support services](https://creative.artvelog.com) - [Patreon - Make Happy :)](https://patreon.com/artvelog/checkout)
 ## Licence
 
 [MIT](https://choosealicense.com/licenses/mit/)
