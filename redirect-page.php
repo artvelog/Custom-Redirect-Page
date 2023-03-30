@@ -52,7 +52,7 @@ if(isset($_SERVER['HTTP_REFERER'])) {
         ?>
     </div>
     <?php
-    //wp_footer();
+    wp_footer();
     if (isset($_GET['url'])) {
         if(empty($_GET['time'])){
             $delay = 5;
