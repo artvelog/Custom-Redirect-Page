@@ -90,11 +90,11 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 <?php 
 }
 else{
-    wp_die( '<h1>404 - Sayfa Bulunamadı</h1>', '404 - Sayfa Bulunamadı', array( 'response' => '404', 'back_link' => true ) );
+    wp_die( '<h1>' . __( '404 - Not Found', 'redirect-artvelog') . '</h1>', '404', array( 'response' => '404', 'back_link' => true ) );
 }
 
 } 
 else {
-    wp_die( '<h1>404 - Sayfa Bulunamadı</h1>', '404 - Sayfa Bulunamadı', array( 'response' => '404', 'back_link' => true ) );
+    wp_die( '<h1>' . __( '404 - Not Found', 'redirect-artvelog') . '</h1>', '404', array( 'response' => '404', 'back_link' => true ) );
 }
 ?>
