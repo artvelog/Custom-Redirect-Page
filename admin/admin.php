@@ -28,7 +28,7 @@ function artvelog_redirectpage_options_page() {
 
             Field::make( 'text', 'redirect_rewrite', __( 'Rewrite Page Slug' , 'redirect-artvelog') )
             ->set_help_text( 'Determine the extension of the redirect page. <b>By default, "redirect" is used.</b> <b style="color: red;">After changing it, you must save the changes from the Permalinks section.</b>', 'redirect-artvelog' )
-            ->set_default_value( "yonlendirme" )
+            ->set_default_value( "redirect" )
             ->set_required(true),
 
             Field::make( 'text', 'delay_time', __( 'Delay Time', 'redirect-artvelog' ) )
