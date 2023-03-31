@@ -5,7 +5,7 @@
  * Plugin Name:       Artvelog - Redirect Page
  * Plugin URI:        https://creative.artvelog.com/#redirect-page
  * Description:       It creates a 'redirect page' between your website and the site to which you will be redirected for Wordpress.
- * Version:           1.05
+ * Version:           1.08
  * Author:            Emre Ertan
  * Author URI:        https://emreertan.com
  * Text Domain:       redirect-artvelog
@@ -68,25 +68,32 @@ function artvelog_redirect() {
     $trim_slug = text_to_url($slug);
 
     $use_tag = carbon_get_theme_option('select_link_tag');
+
+    $site_directory = base64_encode(ABSPATH);
     ?>
     <script>
-    jQuery(function($){
-    $("<?php echo $use_tag ?>").click(function(e) {
-        if(e.target.href.indexOf(location.hostname) != -1){
-            return;
-        }
-        else{
-            if (!$(this).attr("href").startsWith("#")) {
-                e.preventDefault();
-                var url = $(this).attr('href');
-                var ref = "<?php echo $trim_ref ?>";
-                var time = <?php echo $time ?>;
-                var slug = "<?php echo $trim_slug ?>";
-                window.location.href = "/" + slug + "?url=" + encodeURIComponent(url) + "&ref=" + ref + "&time=" + time;
-            }
-        }
-    });
-    });
+    (function ($) {  
+        jQuery(function($){
+            $("<?php echo $use_tag ?>").click(function(e) {
+                var role = e.target.getAttribute("role");
+                if(e.target.href.indexOf(location.hostname) != -1){
+                    return;
+                }
+                else{
+                    if (!$(this).attr("href").startsWith("#") || role == "button") {
+                        e.preventDefault();
+                        var url = $(this).attr('href');
+                        var ref = "<?php echo $trim_ref ?>";
+                        var time = <?php echo $time ?>;
+                        var slug = "<?php echo $trim_slug ?>";
+                        var base = "<?php echo $site_directory ?>";
+
+                        window.location.href = "/" + slug + "?url=" + encodeURIComponent(url) + "&ref=" + ref + "&time=" + time + "&base=" + base;
+                    }
+                }
+            });
+        });
+    })(jQuery);
     </script>
     <?php
 }

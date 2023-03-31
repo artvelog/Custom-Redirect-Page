@@ -1,6 +1,14 @@
 <?php
 define('WP_USE_THEMES', false);
-require_once( $_SERVER[ 'DOCUMENT_ROOT' ] .'/wp-blog-header.php');
+if(isset($_GET['base'])){
+    $base_url = base64_decode( $_GET['base'] );
+	$base_directory = $base_url;
+    require_once( $base_directory . '/wp-blog-header.php');
+}
+else{
+    require_once( $_SERVER[ 'DOCUMENT_ROOT' ] .'/wp-blog-header.php');
+}
+
 
 if(isset($_SERVER['HTTP_REFERER'])) {
     $referer = $_SERVER['HTTP_REFERER'];
@@ -9,6 +17,12 @@ if(isset($_SERVER['HTTP_REFERER'])) {
     remove_action( 'wp_footer', 'artvelog_redirect' );
     
     require_once(plugin_dir_path( __FILE__ ) . '/inc/builder_support.php');
+
+    function redirect_url_shortcode(){
+        $redirect_url = $_GET['url'];
+        return $redirect_url;
+    }
+    add_shortcode( 'rp_redirect_url', 'redirect_url_shortcode' );
         
 ?>
 <!DOCTYPE html>
