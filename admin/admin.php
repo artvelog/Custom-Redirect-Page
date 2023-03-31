@@ -92,3 +92,4 @@ function rp_title_shortcode(){
     return $title;
 }
 add_shortcode( 'rp_title', 'rp_title_shortcode' );
+
