@@ -14,7 +14,7 @@ I am not responsible for any problems that may arise from using the plugin! You 
 [My Website](https://emreertan.com) ~ [Artvelog Creative - WordPress support services](https://creative.artvelog.com) - [Patreon - Make Happy :)](https://patreon.com/join/artvelog/checkout)
 ## Licence
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[GPL2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt)
 
 I'm new to Github, I would appreciate if you could inform me of any inappropriate use :)
 ## Feedback
