@@ -9,8 +9,6 @@ I developed this plugin because I wanted to create a "redirect page" between a l
 - You can specify how long to wait on the redirection page.
 - (X) You can add your custom HTML and PHP template code for the redirection page. (This feature is currently disabled due to security reasons. It may be enabled in future versions.)
 
-I am not responsible for any problems that may arise from using the plugin! You can use and edit it as you wish.
-
 [My Website](https://emreertan.com) ~ [Artvelog Creative - WordPress support services](https://creative.artvelog.com) - [Patreon - Make Happy :)](https://patreon.com/join/artvelog/checkout)
 ## Licence
 
