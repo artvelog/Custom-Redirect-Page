@@ -20,8 +20,3 @@ I'm new to Github, I would appreciate if you could inform me of any inappropriat
 If you have any feedback, please contact us at creative@artvelog.com.
 
   
-## The resources I benefited from
-
-- [@htmlburger](https://github.com/htmlburger/carbon-fields) I used Carbon Fields for the plugin options. Thank you.
-
-  
